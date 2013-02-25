@@ -1,5 +1,6 @@
 require "./game"
 require "./human"
+require "./computer"
 
 
 describe Game do 
@@ -23,6 +24,14 @@ describe Game do
 		game.move(1)
 	end
 
+
+end
+
+describe Computer do
+
+	it "will move to 5 if player moves to 1" do
+		subject.move(1).should == 5
+	end
 
 end
 
