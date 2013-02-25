@@ -25,29 +25,38 @@ describe Game do
 		game.move(1)
 	end
 
-	it "announces a winner" do
-		subject.win("computer",[1,2,3])
-		output.should_receive(:puts).with('computer has one!')
-	end
-
 end
 
 describe Computer do
 
-	it "will move 5 if player moves to 2" do
-		subject.human_move(2).should == 5
+	it "will play 5 if humans first move is  2" do
+		subject.human_first_move(2).should == [5]
 	end
 
-	it "will move 5 if the human moves 4" do
-		subject.human_move(4).should == 5
+	it "will play 5 if humans first move is 4" do
+		subject.human_first_move(4).should == [5]
 	end
 
-	it "will move 5 if player moves to 6" do
-		subject.human_move(6).should == 5
+	it "will play 5 if humans first move is 6" do
+		subject.human_first_move(6).should == [5]
 	end
 
-	it "will move 5 if the human moves 8" do
-		subject.human_move(8).should == 5
+	it "will play 5 if humans first move is 8" do
+		subject.human_first_move(8).should == [5]
+	end
+
+	it "will play 5 if humans first move is 8" do
+		subject.human_first_move(8).should == [5]
+	end
+
+	it "will play 5 if humans first move is 1" do
+		subject.human_first_move(1).should == [5]
+	end
+
+
+
+	it "will play 2 if the human has moved 1 and 3" do
+		subject.block(1,3).should == [2]
 	end
 	
 

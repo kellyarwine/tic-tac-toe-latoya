@@ -7,8 +7,6 @@ class Game
 
 
 
-
-
 	def initialize(output)
 		@output = output
 	end
@@ -22,16 +20,7 @@ class Game
 		@output.puts move
 	end
 
-	def win(player,score)
-		if score == [1,2,3] || [4,6,7] ||[7,8,9] ||
-	    [1,4,7] || [2,5,8] ||[3,6,9]||
-		[1,5,9] ||[7,5,3]
-		@output.puts('#{player} has one!')
-	else
-		false
-	end
-		
-	end
+
 
 
 end
