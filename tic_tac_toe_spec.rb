@@ -70,22 +70,36 @@ describe Computer do
 		subject.block(7,9).should == [8]
 	end
 
+	it "will play 1 if the human plays 5 and 9" do
+		subject.diag_block(5,9).should == [1]
+	end
+
+	it "will play 3 if the human plays 7 and 5" do
+		subject.diag_block(7,5).should == [3]
+	end
+
+	it "will play 7 if the human plays 5 and 3" do
+		subject.diag_block(5,3).should == [7]
+	end
+
+	it "will play 9 if the human plays 1 and 5" do
+		subject.diag_block(1,5).should == [9]
+	end
+
 	
 
 end
 
-describe Board do
 
-	it "should record the humans move" do 
-		subject.human(1).should == [1]
-	end
 
-	it "should record the computers move" do
-		subject.computer(5).should == [5]
+
+describe Human do
+
+	it "should play" do
+		subject.play(1).should == [1]
 	end
 
 end
-
 
 
 
