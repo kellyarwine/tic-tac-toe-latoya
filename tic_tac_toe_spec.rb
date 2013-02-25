@@ -54,10 +54,14 @@ describe Computer do
 	end
 
 
-
 	it "will play 2 if the human has moved 1 and 3" do
 		subject.block(1,3).should == [2]
 	end
+	
+	it "will play 4 if the human has moved 1 and 7" do
+		subject.block(1,7).should == [4]
+	end
+
 	
 
 end

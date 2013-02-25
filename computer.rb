@@ -16,7 +16,8 @@ class Computer
 		if human_move == [1,3]
 			@computer << 2
 		else
-			false
+			human_move == [1,7]
+			@computer << 4
 		end
 		@computer
 	end
