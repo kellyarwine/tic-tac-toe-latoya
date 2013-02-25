@@ -13,13 +13,10 @@ class Computer
 	end
 
 	def block(*human_move)
-		if human_move == [1,3]
-			@computer << 2
-		else
-			human_move == [1,7]
-			@computer << 4
-		end
-		@computer
+		plays = human_move.to_a
+		plays = plays.inject(0) { |sum, x| sum + x } 
+		computer_play = plays / 2
+		@computer << computer_play
 	end
 
 end
