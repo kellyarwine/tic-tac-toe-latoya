@@ -1,6 +1,7 @@
 require "./game"
 require "./human"
 require "./computer"
+require "./board"
 
 
 describe Game do 
@@ -24,14 +25,67 @@ describe Game do
 		game.move(1)
 	end
 
+	it "announces a winner" do
+		subject.win("computer",[1,2,3])
+		output.should_receive(:puts).with('computer has one!')
+	end
 
 end
 
 describe Computer do
 
-	it "will move to 5 if player moves to 1" do
-		subject.move(1).should == 5
+	it "will move 5 if player moves to 2" do
+		subject.human_move(2).should == 5
+	end
+
+	it "will move 5 if the human moves 4" do
+		subject.human_move(4).should == 5
+	end
+
+	it "will move 5 if player moves to 6" do
+		subject.human_move(6).should == 5
+	end
+
+	it "will move 5 if the human moves 8" do
+		subject.human_move(8).should == 5
+	end
+	
+
+end
+
+describe Board do
+
+	it "should record the humans move" do 
+		subject.human(1).should == [1]
+	end
+
+	it "should record the computers move" do
+		subject.computer(5).should == [5]
 	end
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
