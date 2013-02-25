@@ -1,4 +1,5 @@
 require "./game"
+require "./human"
 
 
 describe Game do 
@@ -15,5 +16,13 @@ describe Game do
 		output.should_receive(:puts).with('Enter first move: ')
 		game.start
 	end
-	
+
+	it "receives a move from the Human" do
+		game.start
+		output.should_receive(:puts).with(1)
+		game.move(1)
+	end
+
+
 end
+
