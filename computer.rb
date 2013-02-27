@@ -5,9 +5,11 @@ class Computer
 	end
 
 
-	def human_first_move(human_first_move)
+	def computer_first_move(human_first_move)
 		if human_first_move != 5
-			@computer << 5		
+			@computer << 5	
+		else 
+			@computer << 1
 		end
 	end
 

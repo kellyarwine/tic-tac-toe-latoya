@@ -30,27 +30,31 @@ end
 describe Computer do
 
 	it "will play 5 if humans first move is  2" do
-		subject.human_first_move(2).should == [5]
+		subject.computer_first_move(2).should == [5]
 	end
 
 	it "will play 5 if humans first move is 4" do
-		subject.human_first_move(4).should == [5]
+		subject.computer_first_move(4).should == [5]
 	end
 
 	it "will play 5 if humans first move is 6" do
-		subject.human_first_move(6).should == [5]
+		subject.computer_first_move(6).should == [5]
 	end
 
 	it "will play 5 if humans first move is 8" do
-		subject.human_first_move(8).should == [5]
+		subject.computer_first_move(8).should == [5]
 	end
 
 	it "will play 5 if humans first move is 8" do
-		subject.human_first_move(8).should == [5]
+		subject.computer_first_move(8).should == [5]
 	end
 
 	it "will play 5 if humans first move is 1" do
-		subject.human_first_move(1).should == [5]
+		subject.computer_first_move(1).should == [5]
+	end
+
+	it "will play 1 if humans first move is 5" do
+		subject.computer_first_move(5).should == [1]
 	end
 
 
@@ -69,6 +73,7 @@ describe Computer do
 	it "will play 8 if the human has moved 7 and 9" do
 		subject.block(7,9).should == [8]
 	end
+
 
 	it "will play 1 if the human plays 5 and 9" do
 		subject.diag_block(5,9).should == [1]
@@ -99,6 +104,13 @@ describe Human do
 		subject.play(1).should == [1]
 	end
 
+end
+
+describe Board do
+
+	it "should recognize a winner" do
+
+	end
 end
 
 
