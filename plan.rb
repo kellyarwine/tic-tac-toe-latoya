@@ -1,8 +1,8 @@
 # Single Responsibility Principle:
 
 
-# Human = X; Responsibility: to create player, and methods for player moves. 
+# Human = X; Responsibility: methods to track human moves. 
 # Computer = O; Responsibility: methods to block Human from winning. 
-# Game Responsibility: methods to start game.  
-# Board Responsibility: methods winner, tie, full, empty.
+# Game Responsibility: methods to communicate the start and end of the game with human player.  
+# Board Responsibility: methods winner, tie, full, empty, etc.
 
