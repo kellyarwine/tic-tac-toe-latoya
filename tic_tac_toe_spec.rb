@@ -130,6 +130,11 @@ describe Board do
 		subject.mult_moves(1,"X",5,"O",3, "X").should == {1=>"X", 5=>"O", 3=>"X"}
 	end
 
+	it "should be full" do
+		subject.full?(1,"X",2,"X",3,"X",4,"X",5,"X",6,"X",7,"X",8,"X",9,"X").should be_true
+	end
+
+
 end
 
 

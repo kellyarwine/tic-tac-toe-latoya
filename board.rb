@@ -30,10 +30,14 @@ class Board
      	@board = {space => "#{move}"}
     end
 
-    def mult_moves(*space)
-    	space = Hash[*space]
+    def mult_moves(*moves)
+    	space = Hash[*moves]
     	space 
     	 
+    end
+
+    def full?(*moves)
+    	moves.length == 18
     end
 
 end
