@@ -116,7 +116,18 @@ describe Board do
 		subject.tie([1,2,6,7,9],[3,4,5,8]).should be_true
 	end
 
+	it "should add the humans moves to the board" do
+		subject.board(5, "X").should == {5=> "X"}
+	end
+
+	it "should add the computers moves to the board" do
+		subject.board(1, "O").should == {1=> "O"}
+	end
+
 	
+
+
+
 end
 
 
