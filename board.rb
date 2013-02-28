@@ -30,4 +30,10 @@ class Board
      	@board = {space => "#{move}"}
     end
 
+    def mult_moves(*space)
+    	space = Hash[*space]
+    	space 
+    	 
+    end
+
 end

@@ -127,6 +127,7 @@ describe Board do
 	end
 
 	it "should record multiple moves" do
+		subject.mult_moves(1,"X",5,"O",3, "X").should == {1=>"X", 5=>"O", 3=>"X"}
 	end
 
 end
