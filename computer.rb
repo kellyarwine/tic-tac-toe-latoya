@@ -21,13 +21,13 @@ class Computer
 	end
 
 	def diag_block(*human_move)
-		if human_move == [7,5] #12
+		if human_move == [7,5] 
 			@computer << 3
-		elsif human_move == [5,9] # 14
+		elsif human_move == [5,9] 
 			@computer << 1
-		elsif human_move == [5,3] #8
+		elsif human_move == [5,3] 
 			@computer << 7
-		else human_move == [1,5] # 6
+		else human_move == [1,5] 
 			@computer << 9
 		end
 	end

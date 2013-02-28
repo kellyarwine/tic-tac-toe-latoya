@@ -25,6 +25,11 @@ describe Game do
 		game.move(1)
 	end
 
+	it "tells the user when the game is over" do
+		output.should_receive(:puts).with('Game Over')
+		game.game_over
+	end
+
 end
 
 describe Computer do
@@ -123,10 +128,6 @@ describe Board do
 	it "should add the computers moves to the board" do
 		subject.board(1, "O").should == {1=> "O"}
 	end
-
-	
-
-
 
 end
 

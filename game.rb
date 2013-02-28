@@ -1,12 +1,5 @@
 class Game
 
-	@board = {1=>"", 2=>"", 3=>"",
-			  4=>"", 5=>"", 6=>"",
-			  7=>"", 8=>"", 9=>""}
-
-
-
-
 	def initialize(output)
 		@output = output
 	end
@@ -20,7 +13,8 @@ class Game
 		@output.puts move
 	end
 
-
-
+	def game_over
+		@output.puts('Game Over')
+	end
 
 end
