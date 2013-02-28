@@ -109,8 +109,13 @@ end
 describe Board do
 
 	it "should recognize a winner" do
-
+		subject.winner("computer",[1,2,3]).should be_true
 	end
+
+	it "should recognize a tie" do
+		subject.winner([1,2,6,7,9], [3,4,5,8]).should be_true
+	end
+	
 end
 
 
