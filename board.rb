@@ -1,4 +1,5 @@
 class Board
+
 	def initialize
 		@win = [[1,2,3], [4,5,6], [7,8,9],
 			  [1,4,7], [2,5,8], [3,6,9],
@@ -25,7 +26,7 @@ class Board
 		end
 	end
 
-	def board(space,move)
+	def moves(space,move)
      	@board = {space => "#{move}"}
     end
 

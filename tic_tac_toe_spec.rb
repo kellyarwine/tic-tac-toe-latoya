@@ -100,9 +100,6 @@ describe Computer do
 
 end
 
-
-
-
 describe Human do
 
 	it "should play" do
@@ -122,11 +119,14 @@ describe Board do
 	end
 
 	it "should add the humans moves to the board" do
-		subject.board(5, "X").should == {5=> "X"}
+		subject.moves(5, "X").should == {5=> "X"}
 	end
 
 	it "should add the computers moves to the board" do
-		subject.board(1, "O").should == {1=> "O"}
+		subject.moves(1, "O").should == {1=> "O"}
+	end
+
+	it "should record multiple moves" do
 	end
 
 end
