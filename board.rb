@@ -16,10 +16,16 @@ class Board
 		@win.each do |pattern|
 		    if player_spaces == pattern
 	   			puts "#{player.upcase} HAS WON!"
-	   		else human_spaces =! pattern && computer_spaces != pattern
-	   			puts "tie"
 	   		end   
 	   	end
+	end
+
+	def tie(human_spaces, computer_spaces)
+		@win.each do |pattern|
+			if human_spaces != pattern && computer_spaces != pattern
+				puts "Tie"
+			end
+		end
 	end
 
 end

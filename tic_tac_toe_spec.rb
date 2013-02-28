@@ -113,8 +113,9 @@ describe Board do
 	end
 
 	it "should recognize a tie" do
-		subject.winner([1,2,6,7,9], [3,4,5,8]).should be_true
+		subject.tie([1,2,6,7,9],[3,4,5,8]).should be_true
 	end
+
 	
 end
 
