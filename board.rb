@@ -31,13 +31,19 @@ class Board
     end
 
     def mult_moves(*moves)
-    	space = Hash[*moves]
-    	space 
+    	@board = Hash[*moves]
+    	@board  
     	 
     end
 
     def full?(*moves)
     	moves.length == 18
+    end
+
+    def reset(*moves)
+    	@board = Hash[*moves]
+    	@board.clear
+
     end
 
 end
