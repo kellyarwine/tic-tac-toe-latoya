@@ -120,12 +120,13 @@ describe Computer do
 		subject.perimeter_block(4,1).should == [7]
 	end
 
-	it "will play 8" do
+	it "will play 8 if the human plays 4 and 1" do
+		subject.perimeter_block(5,2).should == [8]
 	end
 
-	it "will play 9" do
+	it "will play 9 if the human plays 4 and 1" do
+		subject.perimeter_block(6,3).should == [9]
 	end
-
 	
 
 end

@@ -50,11 +50,7 @@ class Computer
 			@computer << 8
 		elsif human_move == [6,3] 
 			@computer << 9
-		end
-
-		
-		
+		end		
 	end
-
 end
 
