@@ -20,11 +20,7 @@ class Board
 
 	def tie?(human_spaces, computer_spaces)
 		@win.each do |pattern|
-			if human_spaces != pattern && computer_spaces != pattern
-				true
-			else
-				false
-			end
+			return true if human_spaces != pattern && computer_spaces != pattern
 		end
 	end
 
@@ -39,7 +35,7 @@ class Board
     end
 
     def full?(*moves)
-    	moves.length == 18
+    	return true if moves.length == 18
     end
 
     def reset(*moves)
@@ -50,12 +46,7 @@ class Board
     def valid?(*moves)
     	moves = moves.map {|x| Integer(x) rescue nil }.compact #returns an array of Fixnum variables
     	duplicates = moves.detect{ |e| moves.count(e) > 1 } # returns any duplicate values of array
-    	if duplicates == nil
-    		true
-    	else
-    		false
-    	end
-    	
+    	return true if duplicates == nil
     end
 
 end

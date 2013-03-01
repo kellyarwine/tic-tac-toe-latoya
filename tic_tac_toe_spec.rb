@@ -64,19 +64,19 @@ describe Computer do
 
 
 	it "will play 2 if the human has moved 1 and 3" do
-		subject.block(1,3).should == [2]
+		subject.middle_block(1,3).should == [2]
 	end
 	
 	it "will play 4 if the human has moved 1 and 7" do
-		subject.block(1,7).should == [4]
+		subject.middle_block(1,7).should == [4]
 	end
 
 	it "will play 6 if the human has moved 3 and 9" do
-		subject.block(3,9).should == [6]
+		subject.middle_block(3,9).should == [6]
 	end
 
 	it "will play 8 if the human has moved 7 and 9" do
-		subject.block(7,9).should == [8]
+		subject.middle_block(7,9).should == [8]
 	end
 
 
@@ -94,6 +94,10 @@ describe Computer do
 
 	it "will play 9 if the human plays 1 and 5" do
 		subject.diag_block(1,5).should == [9]
+	end
+
+	it "will play 1 if the human plays 4 and 7" do
+		subject.perimeter_block(4,7).should == [1]
 	end
 
 	
@@ -149,7 +153,6 @@ describe Board do
 	it "should recognize a valid move" do
 		subject.valid?(7,"X",2,"O",3,"X",1,"O").should be_true
 	end
-
 
 end
 

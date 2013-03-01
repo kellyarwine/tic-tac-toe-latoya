@@ -2,6 +2,7 @@ class Computer
 
 	def initialize
 		@computer = Array.new
+		
 	end
 
 
@@ -13,7 +14,7 @@ class Computer
 		end
 	end
 
-	def block(*human_move)
+	def middle_block(*human_move)
 		plays = human_move.to_a
 		plays = plays.inject(0) { |sum, x| sum + x } 
 		computer_play = plays / 2
@@ -30,6 +31,12 @@ class Computer
 		else human_move == [1,5] 
 			@computer << 9
 		end
+	end
+
+	def perimeter_block(*human_move)
+		
+		@perimeter_block.include?(human_move)
+		
 	end
 
 end
