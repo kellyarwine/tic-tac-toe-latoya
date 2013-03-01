@@ -6,29 +6,25 @@ require "./board"
 
 describe Game do 
 
-	let(:output) { double('output').as_null_object }
+	let(:output) { double('output') }
 	let(:game)   { Game.new(output) }
 
-
 	it "starts by greeting the human" do
-		output.should_receive(:puts).with('Welcome to Tic Tac Toe. You are player X.  Good luck!')
+		STDOUT.should_receive(:puts).with('Welcome to Tic Tac Toe. You are player X.  Enter First Move:')
 		game.start 
-	end
-
-	it "tells the human to enter the first move " do 
-		output.should_receive(:puts).with('Enter first move: ')
-		game.start
-	end
-
-	it "receives a move from the human" do
-		output.should_receive(:puts).with(1)
-		game.move(1)
 	end
 
 	it "tells the human when the game is over" do
 		output.should_receive(:puts).with('Game Over')
 		game.game_over
 	end
+
+	it "receives a move from the human" do
+		output.should_receive(:puts).with(1)
+		game.move(1)
+
+	end
+
 
 end
 
