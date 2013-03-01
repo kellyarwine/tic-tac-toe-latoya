@@ -18,10 +18,12 @@ class Board
 	   	end
 	end
 
-	def tie(human_spaces, computer_spaces)
+	def tie?(human_spaces, computer_spaces)
 		@win.each do |pattern|
 			if human_spaces != pattern && computer_spaces != pattern
-				puts "Tie"
+				true
+			else
+				false
 			end
 		end
 	end
@@ -43,7 +45,17 @@ class Board
     def reset(*moves)
     	@board = Hash[*moves]
     	@board.clear
+    end
 
+    def valid?(*moves)
+    	moves = moves.map {|x| Integer(x) rescue nil }.compact #returns an array of Fixnum variables
+    	duplicates = moves.detect{ |e| moves.count(e) > 1 } # returns any duplicate values of array
+    	if duplicates == nil
+    		true
+    	else
+    		false
+    	end
+    	
     end
 
 end
