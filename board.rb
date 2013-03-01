@@ -21,7 +21,7 @@ class Board
 	def tie?(human_spaces, computer_spaces)
 		@win.each do |pattern|
 			return true if human_spaces != pattern && computer_spaces != pattern
-		end
+		endcheckout
 	end
 
 	def moves(space,move)

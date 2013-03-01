@@ -123,7 +123,6 @@ describe Computer do
 
 	it "will play 9 if the human plays 4 and 1" do
 		subject.perimeter_block(6,3).should == [9]
->>>>>>> game_class
 	end
 
 	it "receives a move from the human" do
@@ -173,7 +172,6 @@ describe Computer do
 		subject.middle_block(1,3).should == [2]
 	end
 	
-<<<<<<< HEAD
 	it "will play 4 if the human has moved 1 and 7" do
 		subject.middle_block(1,7).should == [4]
 	end
@@ -235,9 +233,6 @@ describe Computer do
 		subject.perimeter_block(6,3).should == [9]
 	end
 	
-=======
->>>>>>> game_class
-
 end
 
 describe Human do
