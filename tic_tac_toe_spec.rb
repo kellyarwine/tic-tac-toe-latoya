@@ -10,23 +10,22 @@ describe Game do
 	let(:game)   { Game.new(output) }
 
 
-	it "starts by greeting the player" do
+	it "starts by greeting the human" do
 		output.should_receive(:puts).with('Welcome to Tic Tac Toe. You are player X.  Good luck!')
 		game.start 
 	end
 
-	it "prompts the first move" do 
+	it "tells the human to enter the first move " do 
 		output.should_receive(:puts).with('Enter first move: ')
 		game.start
 	end
 
-	it "receives a move from the Human" do
-		
+	it "receives a move from the human" do
 		output.should_receive(:puts).with(1)
 		game.move(1)
 	end
 
-	it "tells the user when the game is over" do
+	it "tells the human when the game is over" do
 		output.should_receive(:puts).with('Game Over')
 		game.game_over
 	end
