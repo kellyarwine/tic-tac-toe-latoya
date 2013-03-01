@@ -34,8 +34,25 @@ class Computer
 	end
 
 	def perimeter_block(*human_move)
+		if human_move == [4,7] 
+			@computer << 1
+		elsif human_move == [5,8] 
+			@computer << 2
+		elsif human_move == [6,9] 
+			@computer << 3
+		elsif human_move == [5,6] 
+			@computer << 4
+		elsif human_move == [5,4] 
+			@computer << 6
+		elsif human_move == [4,1] 
+			@computer << 7
+		elsif human_move == [5,2] 
+			@computer << 8
+		elsif human_move == [6,3] 
+			@computer << 9
+		end
+
 		
-		@perimeter_block.include?(human_move)
 		
 	end
 

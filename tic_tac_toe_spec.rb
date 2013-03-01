@@ -100,6 +100,32 @@ describe Computer do
 		subject.perimeter_block(4,7).should == [1]
 	end
 
+	it "will play 2 if the human plays 5 and 8" do
+		subject.perimeter_block(5,8).should == [2]
+	end
+
+	it "will play 3 if the human plays 6 and 9" do
+		subject.perimeter_block(6,9).should == [3]
+	end
+
+	it "will play 4 if the human plays 5 and 6" do
+		subject.perimeter_block(5,6).should == [4]
+	end
+
+	it "will play 6 if the human plays 5 and 4" do
+		subject.perimeter_block(5,4).should == [6]
+	end
+
+	it "will play 7 if the human plays 4 and 1" do
+		subject.perimeter_block(4,1).should == [7]
+	end
+
+	it "will play 8" do
+	end
+
+	it "will play 9" do
+	end
+
 	
 
 end
